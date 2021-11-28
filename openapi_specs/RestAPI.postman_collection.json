@@ -1,8 +1,8 @@
 {
 	"info": {
 		"_postman_id": "ef9f42fc-526e-4c9f-9680-a44711ac26a2",
-		"name": "VAmPI",
-		"description": "OpenAPI v3 specs for VAmPI",
+		"name": "RestAPI",
+		"description": "OpenAPI v3 specs for RestAPI",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -858,7 +858,7 @@
 					]
 				},
 				{
-					"name": "Login to VAmPI",
+					"name": "Login to RestAPI",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -882,7 +882,7 @@
 								"login"
 							]
 						},
-						"description": "Login to VAmPI"
+						"description": "Login to RestAPI"
 					},
 					"response": [
 						{
@@ -1386,7 +1386,7 @@
 			]
 		},
 		{
-			"name": "VAmPI home",
+			"name": "RestAPI home",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -1399,7 +1399,7 @@
 						""
 					]
 				},
-				"description": "VAmPI is a vulnerable on purpose API. It was created in order to evaluate the efficiency of third party tools in identifying vulnerabilities in APIs but it can also be used in learning/teaching purposes."
+				"description": "RestAPI is a vulnerable on purpose API. It was created in order to evaluate the efficiency of third party tools in identifying vulnerabilities in APIs but it can also be used in learning/teaching purposes."
 			},
 			"response": [
 				{

@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
-  title: VAmPI
-  description: OpenAPI v3 specs for VAmPI
+  title: RestAPI
+  description: OpenAPI v3 specs for RestAPI
   version: "0.1"
 servers:
 - url: /
@@ -22,8 +22,8 @@ paths:
     get:
       tags:
       - home
-      summary: VAmPI home
-      description: VAmPI is a vulnerable on purpose API. It was created in order to evaluate the efficiency of third party tools in identifying vulnerabilities in APIs but it can also be used in learning/teaching purposes.
+      summary: RestAPI home
+      description: RestAPI is a vulnerable on purpose API. It was created in order to evaluate the efficiency of third party tools in identifying vulnerabilities in APIs but it can also be used in learning/teaching purposes.
       operationId: api_views.main.basic
       responses:
         200:
@@ -83,8 +83,8 @@ paths:
     post:
       tags:
       - users
-      summary: Login to VAmPI
-      description: Login to VAmPI
+      summary: Login to RestAPI
+      description: Login to RestAPI
       operationId: api_views.users.login_user
       requestBody:
         description: Username of the user

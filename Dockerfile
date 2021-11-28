@@ -1,10 +1,10 @@
-FROM python:3.7-alpine
+FROM python:3.8.2-slim
 
 RUN mkdir /vampi
-RUN apk --update add bash nano
+#RUN apk --update add bash nano
 
 ENV vulnerable=1
-ENV tokentimetolive=60
+ENV tokentimetolive=600
 
 COPY . /vampi
 WORKDIR /vampi
