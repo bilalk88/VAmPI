@@ -31,7 +31,7 @@ jobs:
       
       - run:
           name: "Get snyk token details"
-          command: echo $snyk_token
+          command: echo ${snyk_token}
           shell: cmd.exe
 
 
