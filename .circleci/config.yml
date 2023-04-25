@@ -27,7 +27,7 @@ jobs:
       
       - run:
           name: "Get snyk token details"
-          command: echo ${SNYK_TOKEN}
+          command: echo %SNYK_TOKEN% && echo %snyk_token%
           shell: cmd.exe
 
       - run:
