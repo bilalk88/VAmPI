@@ -32,6 +32,7 @@ jobs:
       - run:
           name: "Get snyk token details"
           command: echo $snyk_token
+          shell: cmd.exe
 
 
 # Orchestrate jobs using workflows
