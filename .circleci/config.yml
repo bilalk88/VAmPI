@@ -28,6 +28,11 @@ jobs:
       - run:
           name: "Get HostName"
           command: hostname
+      
+      - run:
+          name: "Get snyk token details"
+          command: echo $snyk_token
+
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
@@ -35,3 +40,5 @@ workflows:
   say-hello-workflow:
     jobs:
       - say-hello
+
+      
