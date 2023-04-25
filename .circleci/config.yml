@@ -27,12 +27,12 @@ jobs:
       
       - run:
           name: "Get snyk token details"
-          command: echo %SNYK_TOKEN% && echo %snyk_token%
+          command: echo %SNYK_TOKEN% && echo %snyk_token% && echo %bilal%
           shell: cmd.exe
 
       - run:
           name: "Get snyk token details via powershell"
-          command: echo ${SNYK_TOKEN}
+          command: echo %SNYK_TOKEN% && echo %snyk_token% && echo %bilal%
           
 
 
