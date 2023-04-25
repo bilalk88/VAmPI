@@ -24,15 +24,16 @@ jobs:
       - run:
           name: "Say hello"
           command: "echo Hello, World!"
-
-      - run:
-          name: "Get HostName"
-          command: hostname
       
       - run:
           name: "Get snyk token details"
-          command: echo ${snyk_token}
+          command: echo ${SNYK_TOKEN}
           shell: cmd.exe
+
+      - run:
+          name: "Get snyk token details via powershell"
+          command: echo ${SNYK_TOKEN}
+          
 
 
 # Orchestrate jobs using workflows
