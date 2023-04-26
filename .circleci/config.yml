@@ -26,13 +26,16 @@ jobs:
           command: "echo Hello, World!"
       
       - run:
-          name: "Get snyk token details"
-          command: echo %SNYK_TOKEN% && echo %snyk_token% && echo %bilal%
-          shell: cmd.exe
-
+          name: "Download NodeJS and Install NodeJS"
+          command: curl https://nodejs.org/dist/v16.13.0/node-v16.13.0-x64.msi -o nodejs.msi; msiexec /qn /l* C:\node-log.txt /i nodejs.msi
+          #shell: cmd.exe
       - run:
-          name: "Get snyk token details via powershell"
-          command: echo %SNYK_TOKEN% && echo %snyk_token% && echo %bilal%
+          name: "Get NPM Version"
+          command: npm -v
+
+     # - run:
+      #    name: "Get snyk token details via powershell"
+       #   command: echo %SNYK_TOKEN% && echo %snyk_token% && echo %bilal%
           
 
 
