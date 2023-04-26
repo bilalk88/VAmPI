@@ -31,7 +31,7 @@ jobs:
           #shell: cmd.exe
       - run:
           name: "Get NPM Version"
-          command: npm -v && node -v
+          command: node -v ; npm -v
 
      # - run:
       #    name: "Get snyk token details via powershell"
