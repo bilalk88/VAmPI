@@ -32,6 +32,7 @@ jobs:
       - run:
           name: "Get NPM Version"
           command: node -v ; npm -v
+          shell: cmd.exe
       - run: # Creating a artifacts folder
           name: Create Artifact Folder
           command: mkdir /tmp/snyk-artifacts
@@ -42,12 +43,15 @@ jobs:
       - run:
           name: "Get snyk token details via powershell"
           command: echo %SNYK_TOKEN% && echo %snyk_token% && echo %bilal%
+          shell: cmd.exe
       - run: # run snyk auth - authenticate snyk use environment variables to add token
           name: snyk auth
           command: snyk auth %SNYK_TOKEN%
+          shell: cmd.exe
       - run: # run snyk test - run snyk test
           name: snyk test
           command: snyk test --json | snyk-to-html -o /tmp/snyk-artifacts/Snyk-sca_<< pipeline.number >>_results.html || true
+          shell: cmd.exe
           when: always
       - store_artifacts:
           name: Upload artifact to CircleCI
